@@ -1,0 +1,33 @@
+*go-analyzer.vim.txt*
+                                                             *go-analyzer.vim*
+
+==============================================================================
+CONTENTS                                            *go-analyzer.vim-contents*
+  1. Introduction......................................|go-analyzer.vim-intro|
+  2. Configuration....................................|go-analyzer.vim-config|
+
+==============================================================================
+INTRODUCTION                                           *go-analyzer.vim-intro*
+
+go-analyzer.vim provides a wrapper around `go build -gcflags -m`
+
+==============================================================================
+CONFIGURATION                                         *go-analyzer.vim-config*
+
+                                                     *g:go_analyzer_list_type*
+Display the analysis results in (locationlist|quickfix)
+
+                                                  *g:go_analyzer_custom_signs*
+Default highlighting, use let g:go_analyzer_custom_signs = 0 to disable and
+define your own. Defaults:
+
+sign define go_analyzer_inline text=i texthl=Search
+
+sign define go_analyzer_escape text=e texthl=Error
+
+sign define go_analyzer_escapeinline text=ei texthl=Error
+
+sign define go_analyzer_inlineescape text=ei texthl=Error
+
+
+vim:tw=78:ts=8:ft=help:norl:
